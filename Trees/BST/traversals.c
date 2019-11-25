@@ -48,14 +48,13 @@ void printPreOrder(Node* root){
     printPreOrder(root->right);
 }
 
-//Root Right Left
+//Left Right Root
 void printPostOrder(Node* root){
     if(root == NULL)
         return;
-    
-    printf("%d \t", root->data); 
-    printPostOrder(root->right);
     printPostOrder(root->left);
+    printPostOrder(root->right);
+    printf("%d \t", root->data);     
 }
 
 void levelOrderTraversal(){
