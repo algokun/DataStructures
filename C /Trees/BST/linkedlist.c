@@ -3,7 +3,7 @@
 typedef struct node
 {
     int data;
-    struct node* link;
+    struct node *left,*right;
 }node;
 node* root=NULL;
 void insert(void);
